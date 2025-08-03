@@ -12,7 +12,6 @@ class Solution:
                 else:
                     current_sum += num
             return True
-
         left, right = max(nums), sum(nums)
         while left < right:
             mid = (left + right) // 2
@@ -21,3 +20,4 @@ class Solution:
             else:
                 left = mid + 1
         return left
+
