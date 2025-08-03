@@ -1,0 +1,14 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        def majorityElementInner(nums):
+            d = {}
+            n = len(nums)
+            for key in nums:
+                if key in d:
+                    d[key] += 1
+                else:
+                    d[key] = 1
+            for key, value in d.items():
+                if value > (n // 2):
+                    return key  
+        return majorityElementInner(nums)
