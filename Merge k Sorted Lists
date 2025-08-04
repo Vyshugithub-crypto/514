@@ -10,7 +10,7 @@ class Solution:
         heapq.heapify(heap)
         dummy = curr = ListNode(0)
         while heap:
-            _, _, node = heapq.heappop(heap)
+            val, node_id, node = heapq.heappop(heap)
             curr.next = node
             curr = curr.next
             if node.next:
